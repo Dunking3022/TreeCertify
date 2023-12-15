@@ -13,7 +13,14 @@
       "dest": "index.js"
     }
   ],
-  "scripts": {
-    "prebuild": "./setup.sh"
+  "functions": {
+    "preBuild": {
+      "runtime": "@now/node",
+      "handler": "setup.sh"
+    },
+    "api": {
+      "src": "api/*.js",
+      "use": "@vercel/node"
+    }
   }
 }
