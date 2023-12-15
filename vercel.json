@@ -17,10 +17,6 @@
     "preBuild": {
       "runtime": "@now/node",
       "includeFiles": "setup.sh"
-    },
-    "api": {
-      "src": "api/*.js",
-      "use": "@vercel/node"
     }
   }
 }
