@@ -22,7 +22,7 @@ const upload = multer({storage: storage});
 db.connectToDB();
 
 app.set("view engine","ejs");
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'Views'));
 
 
 app.get('/getjson',xlreader);
