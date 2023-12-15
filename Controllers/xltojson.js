@@ -5,7 +5,7 @@ const generateCertificate = require('./generateCertificate');
 
 module.exports = async (req,res)=>{
     const filename = req.query.filename;
-    const file = xlsx.readFile('./uploads/'+filename);
+    const file = xlsx.readFile(path.join(path.join(__dirname, 'uploads'),filename));
     const userJSON = xlsx.utils.sheet_to_json(file.Sheets[file.SheetNames[0]]);
     // console.log(userJSON);
     Donor.insertMany(userJSON)
