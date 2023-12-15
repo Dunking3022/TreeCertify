@@ -22,6 +22,7 @@ const upload = multer({storage: storage});
 db.connectToDB();
 
 app.set("view engine","ejs");
+app.set('views', path.join(__dirname, 'views')); 
 
 app.get('/getjson',xlreader);
 app.get('/sendmail',email.sendEmail);
