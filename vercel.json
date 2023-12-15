@@ -16,7 +16,7 @@
   "functions": {
     "preBuild": {
       "runtime": "@now/node",
-      "includeFiles": ["setup.sh"]
+      "includeFiles": "setup.sh"
     },
     "api": {
       "src": "api/*.js",
