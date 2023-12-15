@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/form.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <title>Upload Excel Sheet</title>
+</head>
+<body>
+
+<div class="header">
+    <div class="inner-header flex">
+      <h1>Upload Excel Sheet</h1>
+    </div>
+    <form class="form-container" method = "POST" action="/upload" enctype="multipart/form-data">
+      <div class="upload-files-container">
+        <div class="drag-file-area">
+          <span class="material-icons-outlined upload-icon"> file_upload </span>
+          <h3 class="dynamic-message"> Drag & drop any file here </h3>
+          <label class="label"> or <span class="browse-files"> <input name="uploadfile" type="file" class="default-file-input"/> <span class="browse-files-text">browse file</span> <span>from device</span> </span> </label>
+        </div>
+        <span class="cannot-upload-message"> <span class="material-icons-outlined">error</span> Please select a file first <span class="material-icons-outlined cancel-alert-button">cancel</span> </span>
+        <div class="file-block">
+          <div class="file-info"> <span class="material-icons-outlined file-icon">description</span> <span class="file-name"> </span> | <span class="file-size">  </span> </div>
+          <span class="material-icons remove-file-icon">delete</span>
+          <div class="progress-bar"> </div>
+        </div>
+        <button type="button" class="upload-button"> Upload </button>
+      </div>
+
+    </form>
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="1" fill="rgba(255,255,255,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+      </svg>
+    </div>
+  
+  </div>
+  <div class="content flex">
+    <p>Convert your Excel file to JSON </p>
+  </div>
+  <script src="./scripts/form.js"></script>
+</body>
+</html>
